@@ -4,14 +4,8 @@
     margin: 0;
     padding: o;
 }
-
 /* % */
-.header {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 217, 0, 0.705);
-}
 .inner-head {
-    min-height: 10vh;
     background-color: #800080;
     display: flex;
     padding: 0% 6%;
@@ -20,17 +14,17 @@
 }
 .inner-head img {
     position: relative;
-    height: 100px;
+    height: 80px;
     top: -5px;
 }
 .inner-head .icons .fa {
     color:#ffb700;
     margin: 0 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
 }
 nav {
-    background-color: #b38001;
+    background-color: #ffa600;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,11 +104,14 @@ nav {
     }
     .nav-bar .fa {
         display: block;
-        position: absolute;
-        right: 50px;
+        position: fixed;
+        right: 10px;
         color: #ffb700;
-        font-size: 30px;
+        font-size: 40px;
         cursor: pointer;
+        z-index: 2;
+        cursor: pointer;
+        top: 30px;
     }
     .nav-links ul {
         padding: 30px;
@@ -131,15 +128,15 @@ nav {
     height: 75vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .swiper {
-    width: 80%;
+    width: 70%;
     height: fit-content;
-
 }
 .swiper-slide img{
     width: 100%;
-    height: 445px;
+    height: 400px;
 }
 .swiper .swiper-button-prev, .swiper .swiper-button-next {
     color: #ffb700;
@@ -148,15 +145,8 @@ nav {
     background-color: purple;
 }
 @media (max-width: 700px) {
-    .container {
-        width: 100%;
-        height: 70vh;
-    }
-    .swiper {
-        width: 90%;
-    }
     .swiper-slide img{
-        height: 400px;
+        height: 300px;
     }
 }
 @media (max-width: 400px) {
@@ -167,14 +157,14 @@ nav {
         width: 100%;
     }
     .swiper-slide img{
-        height: 300px;
+        height: 250px;
     }
 }
 
 
 /* ABOUT */
 #about, #Offer {
-    padding: 100px 0;
+    padding: 80px 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -228,26 +218,44 @@ nav {
     margin-top: 15px;
     width: 15px;
     height: 15px;
-    background-color: #a1102b;
+    background-color: #49018d;
     display: inline-block;
 }
 .line-2 {
     width: 80px;
     height: 1px;
-    background-color: #a1102b;
+    background-color: #49018d;
     display: inline-block;
 }
 .line-3 {
     width: 60px;
     height: 1px;
-    background-color: #a1102b;
+    background-color: #49018d;
     display: inline-block;
 }
+/* ABOUT MEDIA QUERIES */
+@media only screen and (max-width:770px) {
+    .about-left-col, .about-right-col{
+        flex-basis: 100%;
+    }
+    .about-left-col img {
+        margin: 8%;
+    }
+    .about-text {
+        margin: 0px 50px;
+        display: inline-block;
+    }
+    .about-text h2 {
+        margin: 10px 0 10px;
+        font-size: 28px; 
+        font-style: italic;
+    }
+}
 
-/* CLASSES */
 
+/* CLASSES FEATURE*/
 #features {
-    background-image: linear-gradient(to right top, rgba(128, 0, 128, 0.288) 20%, rgba(0, 102, 255, 0.342), purple);
+    background-image: linear-gradient(to right top, rgba(128, 0, 128, 0.479) 20%, rgba(0, 102, 255, 0.342), purple);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -281,4 +289,254 @@ nav {
 }
 .feature-col .yuv-button {
     margin: 10px 0 20px;
+}
+
+/* MEDIA QUERRIES FOR FEATURE */
+@media only screen and (max-width:800px) {
+    .feature-col {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+ /* ETHOS */
+.ethos {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.row {
+    /* row-margin changed to 0% from 5% */
+    margin: 5%; 
+    display: flex;
+    justify-content: space-between;
+}
+.ethos-col {
+    flex-basis: 50%;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom:30px;
+    position: relative;
+    overflow: hidden;
+}
+.ethos-col img{
+    height: 300px;
+    width: 100%;
+    display: block;
+}
+.layer {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+.layer:hover {
+    background-image: linear-gradient(to right top, rgba(110, 0, 110, 0.925) 20%, rgba(4, 78, 190, 0.925), rgb(88, 2, 114));
+}
+.layer h3 {
+    padding: 25px;
+    width: 100%;
+    font-weight: 600;
+    color: rgb(252, 180, 0);
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+}
+.layer h3 p {
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.layer:hover h3 {
+    bottom: 20%;
+    opacity: 1; 
+}
+@media only screen and (max-width:800px) {
+    .row {
+        flex-direction: column;
+    }
+    .layer {
+        background-image: linear-gradient(to right top, rgba(110, 0, 110, 0.925) 20%, rgba(4, 78, 190, 0.925), rgb(88, 2, 114));
+    }
+    .layer:hover {
+        background-image: linear-gradient(to right top, rgba(110, 0, 110, 0.925) 20%, rgba(4, 78, 190, 0.925), rgb(88, 2, 114));
+    }
+    .layer h3 {
+        bottom: 20%;
+        opacity: 1;
+    }
+}
+
+/* FACILITIES */
+.facilities {
+    background-color: rgb(214, 213, 213);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.facilities-col {
+    background-color: #ffa600;
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
+.facilities-col h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 0 5px;
+}
+.facilities-col p {
+    color: rgb(58, 57, 57);
+    margin: 10px 0 0 5px;
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+@media only screen and (max-width:800px) {
+    .facilities-col p {
+        padding-bottom: 10px;
+    }
+}
+
+/* Extra-curicular Activities */
+.exta-activities {
+    padding-top: 30px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.exta-activities .row {
+    margin: 10px;
+}
+.exta-activities h1 {
+    margin: 0 5px;
+}
+.exta-activities-col {
+    background-color: #5802a8f8;
+    flex-basis: 31%;
+    text-align: center;
+    margin: 10px;
+}
+.exta-activities-col img {
+    width: 100%;
+    height: 70%;
+}
+.exta-activities-col h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0 0 5px;
+}
+
+
+/* CALL TO ACTION */
+.cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url("images/customer\ care.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0px;
+}
+.cta .yuv-button {
+    border: 1px solid gold;
+    color: white;
+    text-transform: uppercase;
+}
+@media (max-width: 700px) {
+    .cta h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* FOOTER */
+#footer {
+    padding: 50px 0 30px;
+}
+hr {
+    width: 100%;
+    border-top: 1px solid #5802a8f8;
+}
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right:100px;
+    margin-left: 100px;
+}
+.footer-left {
+    flex-basis:50%;
+    margin-top: 60px;
+}
+.footer-right {
+    flex-basis: 35%;
+}
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.link-title h4 {
+    color: #ffa600;
+    margin-bottom: 10px;
+}
+.footer-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-logo img {
+    width: 100px;
+}
+.footer-logo button {
+    padding: 12px 38px;
+    font-size: 10px;
+}
+.copy-right-text, .footer-logo {
+    flex-basis: 40px;
+}
+@media only screen and (max-width:800px) {
+    .footer-row {
+        margin-right:50px;
+        margin-left: 40px;
+    }
+    .footer-left, .footer-right {
+        flex-basis:100%;
+    }
+    .link-title {
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
 }
