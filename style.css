@@ -364,13 +364,8 @@ h1 {
     font-size: 15px;
     font-weight: 400;
 }
-.layer h3 ul {
-    width: 100%;
-
-    justify-content: center;
-    text-align: center;
-}
 .layer h3 li {
+
     margin-right: 40px;
     list-style-type: none;
     color: white;
@@ -393,8 +388,17 @@ h1 {
         background-image: linear-gradient(to right top, rgba(110, 0, 110, 0.925) 20%, rgba(4, 78, 190, 0.925), rgb(88, 2, 114));
     }
     .layer h3 {
-        bottom: 20%;
+        bottom: 10%;
         opacity: 1;
+    }
+    .layer h3 li {
+        background-color: #49014998;
+        border-radius: 10px;
+        margin:5px;
+        list-style-type: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
     }
 }
 
