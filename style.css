@@ -364,9 +364,23 @@ h1 {
     font-size: 15px;
     font-weight: 400;
 }
+.layer h3 ul {
+    width: 100%;
+
+    justify-content: center;
+    text-align: center;
+}
+.layer h3 li {
+    margin-right: 40px;
+    list-style-type: none;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
 .layer:hover h3 {
-    bottom: 20%;
-    opacity: 1; 
+    bottom: 10%;
+    opacity: 1;
 }
 @media only screen and (max-width:800px) {
     .row {
@@ -609,7 +623,6 @@ hr {
     font-size: 50px;
     text-shadow: 1px 2px #ffa600;
 }
-
 
 /* Contact Us Page */
 .location {
