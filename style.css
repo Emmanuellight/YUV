@@ -365,11 +365,11 @@ h1 {
     font-weight: 400;
 }
 .layer h3 li {
-
-    margin-right: 40px;
+    background-color: #49014998;
+    border-radius: 10px;
+    margin:5px;
     list-style-type: none;
     color: white;
-    margin-top: 10px;
     font-size: 15px;
     font-weight: 400;
 }
@@ -388,7 +388,7 @@ h1 {
         background-image: linear-gradient(to right top, rgba(110, 0, 110, 0.925) 20%, rgba(4, 78, 190, 0.925), rgb(88, 2, 114));
     }
     .layer h3 {
-        bottom: 10%;
+        top: 10%;
         opacity: 1;
     }
     .layer h3 li {
